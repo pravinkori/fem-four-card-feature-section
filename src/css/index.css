@@ -15,11 +15,11 @@
 }
 
 /*
-  3. Allow viewport-based heights in the application
+  3. Allow percentage-based heights in the application
 */
 html,
 body {
-  min-height: 100vh;
+  min-height: 100%;
 }
 
 /*
@@ -30,6 +30,7 @@ body {
 body {
   line-height: 1.75;
   -webkit-font-smoothing: antialiased;
+  color: hsl(229, 6%, 66%);
 }
 
 /*
