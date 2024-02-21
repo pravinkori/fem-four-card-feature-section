@@ -47,6 +47,7 @@ header {
 }
 
 header > p {
+  margin-top: 1rem;
   font-size: var(--fs-500);
 }
 
