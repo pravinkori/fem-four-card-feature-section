@@ -6,45 +6,49 @@ import iconTeam from "../assets/images/icon-team-builder.svg";
 
 function Card() {
   return (
-    <>
-      <div className="wrapper">
-        <div className="layout-grid">
-          <div className="col">
-            <div className="card border-cyan">
-              <h2 className="card__title">Supervisor</h2>
-              <p>Monitors activity to identify project roadblocks</p>
-              <img className="card__img" src={iconSupervisor} alt="icon" />
-            </div>
-          </div>
-          <div className="col">
-            <div className="card border-red">
-              <h2 className="card__title">Team Builder</h2>
-              <p>
-                Scans our talent network to create the optimal team for your
-                project
-              </p>
-              <img className="card__img" src={iconTeam} alt="" />
-            </div>
-            <div className="card border-orange">
-              <h2 className="card__title">Karma</h2>
-              <p>Regularly evaluates our talent to ensure quality</p>
-              <img className="card__img" src={iconKarma} alt="" />
-            </div>
-          </div>
-          <div className="col">
-            <div className="card border-blue">
-              <h2 className="card__title">Calculator</h2>
-              <p>
-                Uses data from past projects to provide better delivery
-                estimates
-              </p>
-              <img className="card__img" src={iconCalculator} alt="" />
-            </div>
-          </div>
+    <div className="wrapper">
+      <div className="layout-grid">
+        <div className="col">
+          <CardItem
+            title="Supervisor"
+            description="Monitors activity to identify project roadblocks"
+            image={iconSupervisor}
+            borderColor="cyan"
+          />
+        </div>
+        <div className="col">
+          <CardItem
+            title="Team Builder"
+            description="Scans our talent network to create the optimal team for your project"
+            image={iconTeam}
+            borderColor="red"
+          />
+          <CardItem
+            title="Karma"
+            description="Regularly evaluates our talent to ensure quality"
+            image={iconKarma}
+            borderColor="orange"
+          />
+        </div>
+        <div className="col">
+          <CardItem
+            title="Calculator"
+            description="Uses data from past projects to provide better delivery estimates"
+            image={iconCalculator}
+            borderColor="blue"
+          />
         </div>
       </div>
-    </>
+    </div>
   );
 }
+
+const CardItem = ({ title, description, image, borderColor }) => (
+  <div className={`card border-${borderColor}`}>
+    <h2 className="card__title">{title}</h2>
+    <p>{description}</p>
+    <img className="card__img" src={image} alt="icon" />
+  </div>
+);
 
 export default Card;
